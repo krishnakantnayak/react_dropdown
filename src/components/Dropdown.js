@@ -2,12 +2,12 @@ import { useState } from "react";
 
 const Dropdown = (props) => {
 
-  // var dropdownval='Dropdown';
 
+//two hooks one to pdate dopdown value after click and other check visibility while hovering
   const [ddval, setddval] = useState("Select");
   const [isInvisible, setisInvisible] = useState(true);
 
-
+//update value after clicking
   function updrval(op) {
     setddval(op);
     setisInvisible(true)
@@ -17,7 +17,6 @@ const Dropdown = (props) => {
   return (
     <div className="container">
       <h2>Should you use a dropdown</h2>
-
 
       <div className="dropdown" onMouseLeave={() => setisInvisible(true)} onMouseEnter={() => { setisInvisible(false) }}>
         <button className="dropbtn">{ddval} <span style={{ "float": "right" }}>	&#x25BD;</span> </button>
